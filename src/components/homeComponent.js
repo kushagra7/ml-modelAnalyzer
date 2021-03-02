@@ -10,6 +10,7 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container';
+import CsvReader from './CsvReader';
 
 export default function homeComponent() {
     return (
@@ -19,21 +20,11 @@ export default function homeComponent() {
                     <Col sm={2}></Col>
                     <Col sm={8}>
                         <Jumbotron >
-                            <p id ="head">ML MODEL ANALYZER </p>
+                            <p id="head">ML MODEL ANALYZER </p>
                             <p>
                                 Start by uploading a plain text model and press Analyze button.
                          </p>
 
-                            <Form>
-                                <Form.File
-                                    id="custom-file-translate-scss"
-                                    label="Custom file input"
-                                    lang="en"
-                                    custom
-                                />
-                            </Form>
-                            <p>
-                            </p>
                             <ButtonGroup className="mb-2">
                                 <Button variant="outline-primary">Unencrypted Data</Button>
                                 <Button variant="outline-primary">Encrypted Data</Button>
@@ -47,6 +38,7 @@ export default function homeComponent() {
                     </Col>
                     <Col sm={2}></Col>
                 </Row>
+                <CsvReader />
             </Container>
         </Fragment>
     )
