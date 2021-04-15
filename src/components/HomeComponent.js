@@ -57,8 +57,8 @@ const HomeComponent = () => {
         <Fragment>
             <Container>
                 <Row>
-                    <Col sm={2}></Col>
-                    <Col sm={8}>{model == null ?
+                    <Col>
+                {model == null ?
                         <div>
                             <div>Model Loading</div>
                             <Loader
@@ -71,13 +71,9 @@ const HomeComponent = () => {
                         :
                         <Fragment>
                             <Jumbotron >
-                                <p id="head">ML MODEL ANALYZER </p>
-                                <p>
-                                    Ask Questions about Batman Movies
-                         </p>
-                                <br />
+                                <p>Ask Questions about Batman Movies</p>
                                 {/* <textarea ref={passageRef} rows="20" cols={80}> </textarea> */}
-                                <input ref={questionRef} size="80"></input>
+                                <input ref={questionRef} size="70"></input>
                                 <br />
                                 <br />
                                 <Button variant="primary" onClick={answerQuestion}>Predict</Button>{' '}
@@ -87,8 +83,8 @@ const HomeComponent = () => {
                             </Jumbotron>
                         </Fragment>
                     }
-
                     </Col>
+
                     {/* <Col sm={8}>
                         <Jumbotron >
                             <p id="head">ML MODEL ANALYZER </p>
