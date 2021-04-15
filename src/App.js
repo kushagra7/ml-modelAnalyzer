@@ -1,11 +1,11 @@
 import './App.css';
-import Home from './components/HomeComponent';
+import HomeComponent from './components/HomeComponent';
 import { Fragment } from 'react';
 
 function App() {
   return (
     <Fragment>
-      < Home /> 
+      < HomeComponent /> 
     </Fragment>
   )
 }
