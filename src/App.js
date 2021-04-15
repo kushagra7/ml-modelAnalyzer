@@ -1,12 +1,19 @@
 import './App.css';
-import HomeComponent from './components/HomeComponent';
 import { Fragment } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import HomeComponent from './components/HomeComponent';
+import PdfComponent from './components/PdfComponent';
 
 function App() {
   return (
-    <Fragment>
-      < HomeComponent /> 
-    </Fragment>
+    <Router>
+      <Fragment>
+        <Switch>
+          <Route exact path="/" ><HomeComponent/></Route>
+          <Route path="/pdf" ><PdfComponent/></Route>
+        </Switch>
+      </Fragment>
+    </Router>
   )
 }
 

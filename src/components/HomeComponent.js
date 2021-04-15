@@ -40,7 +40,7 @@ const HomeComponent = () => {
 
     //handle questions
     const answerQuestion = async (e) => {
-        if (e.which === 13 && model != null) {
+        if (model != null) {
             console.log("question submitted");
             //const passage = passageRef.current.value;
 
@@ -81,8 +81,12 @@ const HomeComponent = () => {
                                 <br />
                         Ask a Question
                         <br />
-                                <input ref={questionRef} onKeyPress={answerQuestion} size="80"></input>
-                                <br />Answers
+                                <input ref={questionRef} size="80"></input>
+                                <br />
+                                <br/>
+                                <Button variant="primary" onClick={answerQuestion}>Predict</Button>{' '}
+                                <br/><br />
+                                Answers
                         <br />
                                 {answer ? answer.map((ans, idx) => <div><b>Answer{idx + 1} - </b>{ans.text}({ans.score})</div>) : ""}
 
