@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { Fragment } from 'react';
 import '../styles/home.css';
+import textData from '../data/textData.js';
 
 //components from 'react bootstrap'
 import Jumbotron from 'react-bootstrap/Jumbotron';
@@ -41,7 +42,9 @@ const HomeComponent = () => {
     const answerQuestion = async (e) => {
         if (e.which === 13 && model != null) {
             console.log("question submitted");
-            const passage = passageRef.current.value;
+            //const passage = passageRef.current.value;
+
+            const passage = textData;
             const question = questionRef.current.value;
 
             const answers = await model.findAnswers(question, passage)
@@ -54,14 +57,15 @@ const HomeComponent = () => {
         <Fragment>
             <Container>
                 <Row>
-                    <Col sm={10}>{model == null ?
+                    <Col sm={2}></Col>
+                    <Col sm={8}>{model == null ?
                         <div>
                             <div>Model Loading</div>
                             <Loader
                                 type="Puff"
                                 color="#00ffBB"
-                                height={50}
-                                width={70}
+                                height={100}
+                                width={100}
                             />
                         </div>
                         :
@@ -71,15 +75,16 @@ const HomeComponent = () => {
                                 <p>
                                     Start by uploading a plain text model and press Analyze button.
                          </p>
-                         Passage
-                        <textarea ref={passageRef} rows="30" cols={100}> </textarea>
-                        <br/>
-                        Ask a Question 
-                        <br/>
-                        <input ref={questionRef} onKeyPress={answerQuestion} size="80"></input>
-                        <br/>Answers
-                        <br/>
-                        {answer ? answer.map((ans, idx) => <div><b>Answer{idx + 1} - </b>{ans.text}({ans.score})</div>) : ""}
+                         Ask Questions about Batman Movies
+                         <br />
+                                {/* <textarea ref={passageRef} rows="20" cols={80}> </textarea> */}
+                                <br />
+                        Ask a Question
+                        <br />
+                                <input ref={questionRef} onKeyPress={answerQuestion} size="80"></input>
+                                <br />Answers
+                        <br />
+                                {answer ? answer.map((ans, idx) => <div><b>Answer{idx + 1} - </b>{ans.text}({ans.score})</div>) : ""}
 
                             </Jumbotron>
                         </Fragment>
