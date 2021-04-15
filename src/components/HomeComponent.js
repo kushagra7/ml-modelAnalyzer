@@ -73,23 +73,17 @@ const HomeComponent = () => {
                             <Jumbotron >
                                 <p id="head">ML MODEL ANALYZER </p>
                                 <p>
-                                    Start by uploading a plain text model and press Analyze button.
+                                    Ask Questions about Batman Movies
                          </p>
-                         Ask Questions about Batman Movies
-                         <br />
-                                {/* <textarea ref={passageRef} rows="20" cols={80}> </textarea> */}
                                 <br />
-                        Ask a Question
-                        <br />
+                                {/* <textarea ref={passageRef} rows="20" cols={80}> </textarea> */}
                                 <input ref={questionRef} size="80"></input>
                                 <br />
-                                <br/>
+                                <br />
                                 <Button variant="primary" onClick={answerQuestion}>Predict</Button>{' '}
-                                <br/><br />
-                                Answers
-                        <br />
-                                {answer ? answer.map((ans, idx) => <div><b>Answer{idx + 1} - </b>{ans.text}({ans.score})</div>) : ""}
-
+                                <br /><br />
+                                <h4>Answers</h4>
+                                <p>{answer ? answer.map((ans, idx) => <div><b>Answer{idx + 1} - </b>{ans.text}</div>) : ""}</p>
                             </Jumbotron>
                         </Fragment>
                     }
