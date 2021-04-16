@@ -35,12 +35,12 @@ function App() {
               </Switch>
            
               <Switch>
-                <Link to="/pdf">
+                <Link to="/csv">
                   <Col>
                   <Card className="text-center" style={{ width: '15rem' }}>
                     <Card.Img variant="top" src="https://images.unsplash.com/photo-1524514587686-e2909d726e9b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" />
                     <Card.Body>
-                      <Card.Title>Pdf Extractor</Card.Title>
+                      <Card.Title>CSV Extractor</Card.Title>
                     </Card.Body>
                   </Card>
                   </Col>
@@ -48,7 +48,7 @@ function App() {
               </Switch>
             
             <Route exact path="/home" ><HomeComponent /></Route>
-            <Route exact path="/pdf" ><PdfComponent /></Route>
+            <Route exact path="/csv" ><PdfComponent /></Route>
           </Row>
         </Container>
       </Fragment>
