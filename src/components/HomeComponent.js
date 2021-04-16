@@ -21,6 +21,7 @@ import Loader from "react-loader-spinner";
 
 
 const HomeComponent = () => {
+    const style = { position: "fixed", top: "70%", left: "50%", transform: "translate(-50%, -50%)" };
 
     //setup references and state hooks
     const passageRef = useRef(null);
@@ -59,11 +60,10 @@ const HomeComponent = () => {
                 <Row>
                     <Col>
                 {model == null ?
-                        <div>
-                            <div>Model Loading</div>
+                        <div style={style}>
                             <Loader
-                                type="Puff"
-                                color="#00ffBB"
+                                type="ThreeDots"
+                                color="#0275d8"
                                 height={100}
                                 width={100}
                             />
@@ -71,15 +71,14 @@ const HomeComponent = () => {
                         :
                         <Fragment>
                             <Jumbotron >
-                                <p>Ask Questions about Batman Movies</p>
+                                <p>Ask Questions about iPhones</p>
                                 {/* <textarea ref={passageRef} rows="20" cols={80}> </textarea> */}
                                 <input ref={questionRef} size="70"></input>
                                 <br />
                                 <br />
                                 <Button variant="primary" onClick={answerQuestion}>Predict</Button>{' '}
                                 <br /><br />
-                                <h4>Answers</h4>
-                                <p>{answer ? answer.map((ans, idx) => <div><b>Answer{idx + 1} - </b>{ans.text}</div>) : ""}</p>
+                                <p>{answer ? answer.map((ans, idx) => <div><b>Prediction {idx + 1} - </b>{ans.text}</div>) : ""}</p>
                             </Jumbotron>
                         </Fragment>
                     }

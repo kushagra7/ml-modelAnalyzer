@@ -27,7 +27,7 @@ function App() {
                   <Card className="text-center" style={{ width: '15rem' }}>
                     <Card.Img variant="top" src="https://images.unsplash.com/photo-1553484771-371a605b060b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" />
                     <Card.Body>
-                      <Card.Title>Pdf Analyzer</Card.Title>
+                      <Card.Title>Predictor</Card.Title>
                     </Card.Body>
                   </Card>
                   </Col>
@@ -38,9 +38,9 @@ function App() {
                 <Link to="/pdf">
                   <Col>
                   <Card className="text-center" style={{ width: '15rem' }}>
-                    <Card.Img variant="top" src="https://images.unsplash.com/photo-1553484771-371a605b060b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" />
+                    <Card.Img variant="top" src="https://images.unsplash.com/photo-1524514587686-e2909d726e9b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" />
                     <Card.Body>
-                      <Card.Title>Predictor</Card.Title>
+                      <Card.Title>Pdf Extractor</Card.Title>
                     </Card.Body>
                   </Card>
                   </Col>
