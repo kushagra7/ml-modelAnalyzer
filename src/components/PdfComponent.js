@@ -10,7 +10,7 @@ const PdfComponent = () => {
             <Row>
                 <Col xs={1} md={2}></Col>
                 <Col xs={1} md={8}>
-                    <br/>
+                    <br />
                     <CsvReader />
                 </Col>
                 <Col xs={1} md={2}></Col>
