@@ -32,10 +32,10 @@ const CsvReader = () => {
                     console.log("importer dismissed");
                 }}
             >
-                <ImporterField name="name" label="Name" />
-                <ImporterField name="email" label="Email" />
-                <ImporterField name="dob" label="Date of Birth" optional />
-                <ImporterField name="postalCode" label="Postal Code" optional />
+                <ImporterField name="name" label="Feature 1" />
+                <ImporterField name="email" label="Feature 2" />
+                <ImporterField name="dob" label="Feature 3" optional />
+                <ImporterField name="postalCode" label="Feature 4" optional />
             </Importer>
         </div>
     )

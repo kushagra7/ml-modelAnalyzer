@@ -83,27 +83,8 @@ const HomeComponent = () => {
                         </Fragment>
                     }
                     </Col>
-
-                    {/* <Col sm={8}>
-                        <Jumbotron >
-                            <p id="head">ML MODEL ANALYZER </p>
-                            <p>
-                                Start by uploading a plain text model and press Analyze button.
-                         </p>
-
-                            <ButtonGroup className="mb-2">
-                                <Button variant="outline-primary">Unencrypted Data</Button>
-                                <Button variant="outline-primary">Encrypted Data</Button>
-                            </ButtonGroup>
-
-                            <p>
-                                <Button variant="primary" size="lg">Analyze</Button>
-                            </p>
-                        </Jumbotron>
-
-                    </Col> */}
                 </Row>
-                {/* <CsvReader /> */}
+               
             </Container>
         </Fragment>
     )
