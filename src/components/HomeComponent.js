@@ -71,7 +71,7 @@ const HomeComponent = () => {
                         :
                         <Fragment>
                             <Jumbotron >
-                                <p>Ask Questions about audi</p>
+                                <p>Ask Questions about iPhone</p>
                                 {/* <textarea ref={passageRef} rows="20" cols={80}> </textarea> */}
                                 <input ref={questionRef} size="70"></input>
                                 <br />
